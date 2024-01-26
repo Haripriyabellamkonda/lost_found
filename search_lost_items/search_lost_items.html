@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Search Lost Items</title>
+    <link rel="stylesheet" type="text/css" href="searchstyle.css">
+    <style>
+        *{
+          margin: 0;
+          padding: 0;
+        }
+        div{
+        
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          margin:40px;
+  
+  
+        }
+        button{
+          border: none;
+          cursor: pointer; 
+          appearance: none;
+          background-color: inherit;
+           /* transition: transform .7s ease-in-out; */
+          margin-left:10px;
+  
+        }
+        button:hover{
+          /* transform: rotate(360deg); */
+  
+        }
+        img{
+          width: 140px;
+          height: 140px;
+        }
+        input[type="email"]{
+          padding:10px;
+          border:2px solid #314de4;
+          outline :none;
+          border-radius:5px;
+          font-size:24px;
+          color:#314de4;
+        }
+        .text{
+          font-size:60px;
+          color:#314de4;
+          font-family:Arial;
+        }
+        .button {
+  display: inline-block;
+  border-radius: 4px;
+  background-color: #0ca0da;
+  border: none;
+  color: #FFFFFF;
+  text-align: center;
+  font-size: 28px;
+  padding: 20px;
+  width: 200px;
+  /* transition: all 0.5s; */
+  cursor: pointer;
+  margin: 5px;
+}
+
+.button span {
+  cursor: pointer;
+  display: inline-block;
+  position: relative;
+  /* transition: 0.5s; */
+}
+
+.button span:after {
+  content: '\00bb';
+  position: absolute;
+  opacity: 0;
+  top: 0;
+  right: -20px;
+  /* transition: 0.5s; */
+}
+
+.button:hover span {
+  padding-right: 25px;
+}
+
+.button:hover span:after {
+  opacity: 1;
+  right: 0;
+}
+.navbar {
+  overflow: hidden;
+  background-color: #333; 
+}
+
+.navbar a {
+  float: left;
+  font-size: 16px;
+  color: white;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+
+.navbar a:hover {
+  background-color: #5d5454;
+}
+      </style>
+</head>
+<body>
+  <div class="navbar">
+        
+    <i class="fas fa-cat" style="font-size:48px;color:red;"></i>
+
+    <a href="../Login/dashboard.html" >Home</a>
+
+    <a href="../login/homepage.html" >About</a>
+
+    <a href="../login/contact.html" >Contact us</a>  
+
+    <a href="../login/Faq.html" >FAQ S</a>
+
+    <a href="../search_lost_items/search_lost_items.html" >Search all items</a>
+
+    <a href="../report_lost/report_lost_item.html" >Report lost items</a> 
+
+    <a href="../report _found/report_found_item.html" >Report found items</a>
+
+    <a href="../logout/out.html">Logout</a>
+
+
+</div>
+    <h1>Search all items</h1>
+    <div><form action = "./search_table.php" method="post">
+        <button class="button" style="vertical-align:middle"><span>details about lost items </span></button>
+          </form>
+    </div>
+
+
+    <div><form action = "./found_table.php" method="post">
+        <button class="button" style="vertical-align:middle"><span>details about found items </span></button>
+          </form>
+    </div>
+
+    <div>
+      <form action = "./founditem.php" method="post">
+        <button class="button" style="vertical-align:middle"><span>Display all Found images </span></button>
+
+    </form>
+    </div>
+    <div>
+      <form action = "./lostitem.php" method="post">
+        <button class="button" style="vertical-align:middle"><span>Display all lost images </span></button>
+        </form>
+    </div>
+
+    <div id="search-results"></div>
+</body>
+</html>
